@@ -948,7 +948,13 @@ def clear_session():
 # ─────────────────────────────────────────────────────────────────────────────
 
 def build_app():
-    with gr.Blocks(title="Odin — Drilling Intelligence") as app:
+    _theme = gr.themes.Soft(
+        primary_hue="emerald",
+        secondary_hue="slate",
+        neutral_hue="slate",
+        font=gr.themes.GoogleFont("Inter"),
+    )
+    with gr.Blocks(title="Odin — Drilling Intelligence", theme=_theme, css=CUSTOM_CSS) as app:
 
         answer_state = gr.State(None)  # holds export payload dict
 
@@ -1063,9 +1069,5 @@ demo, _figures_dir = _make_demo()
 
 
 if __name__ == "__main__":
-    demo.launch(
-        server_name="0.0.0.0",
-        server_port=7860,
-        share=False,
-        allowed_paths=[str(_figures_dir)],
-    )
+    demo.launch(server_name="0.0.0.0", server_port=7860, share=False,
+                allowed_paths=[str(_figures_dir)])
