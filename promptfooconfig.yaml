@@ -1,0 +1,41 @@
+# promptfooconfig.yaml
+# --------------------
+# Configuration for evaluating the AI Drilling Copilot Agents
+# 
+# NOTE: This rubric is completely customizable! 
+# You can tweak the test cases, prompts, and evaluation rules perfectly
+# to match the SPE GCS 2026 ML Challenge evaluation criteria.
+
+description: "SPE GCS 2026: Agent Rubric Evaluation"
+
+providers:
+  # Using Promptfoo's native Google provider. 3.1 is not fully supported by the npm plugin yet.
+  - id: google:gemini-2.5-flash-preview
+    label: "baseline-agent-model"
+
+prompts:
+  - file://tests/prompts/analyst_prompt.txt
+  - file://tests/prompts/historian_prompt.txt
+  - file://tests/prompts/auditor_prompt.txt
+  - file://tests/prompts/lead_prompt.txt
+
+tests:
+  - vars:
+      question: "Which hole section in well 15/9-19 B was the most challenging to drill?"
+      context: "DDR data shows NPT of 45 hours in the 12.25 inch section due to severe losses. WITSML confirms high torque fluctuations."
+    assert:
+      - type: "icontains"
+        value: "12.25"
+      - type: "llm-rubric"
+        value: "The response MUST explicitly state a 'Confidence Level' or 'Uncertainty'."
+      - type: "llm-rubric"
+        value: "The response must clearly state the evidence (either data or reports) used to make the conclusion."
+
+  - vars:
+      question: "What were the lessons learned regarding weather-induced NPT?"
+      context: "Historical Volve data indicates waiting on weather (WOW) caused 15% of all delays, particularly stalling riser pulling operations."
+    assert:
+      - type: "llm-rubric"
+        value: "The response must synthesize the context to identify actionable lessons learned, not just repeat the data."
+      - type: "not-icontains"
+        value: "As an AI language model"

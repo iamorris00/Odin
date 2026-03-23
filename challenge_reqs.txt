@@ -1,0 +1,182 @@
+\n--- PAGE 1 ---\n 
+1 
+ 
+SPE GCS 2026 ML Challenge  - Building 
+an Agentic AI System for Operational 
+Intelligence 
+Introduction 
+Drilling a well for oil and gas is a complex engineering activity. During drilling, large amounts of 
+data are generated. This includes numerical measurements such as depth and rate of 
+penetration, as well as written daily reports prepared by engineers at the rig site. 
+ 
+Engineers must combine these different types of information to understand what is happening, 
+detect problems, evaluate performance, and decide what actions to take next. 
+ 
+In this challenge, your task is to build an intelligent AI agent that can read drilling data and 
+reports, reason about them, and answer operational questions in a clear and evidence based 
+way. 
+ 
+The goal is not only to predict values. The goal is to explain what happened, why it happened, 
+and what are the potential next steps. 
+Aim of the Challenge 
+The aim of this challenge is to design an AI system that can combine structured data, written 
+reports, and domain knowledge to generate operational insights. 
+ 
+Your system should be able to: 
+• Understand drilling operations 
+• Identify drilling phases and activities 
+• Analyze performance and efficiency 
+• Evaluate drilling configurations 
+• Explain operational issues 
+• Provide decision support 
+The focus is on reasoning, clarity, and evidence based conclusions. \n--- PAGE 2 ---\n 
+2 
+ 
+Data That Will Be Provided 
+Participants will receive extracted data from the public Equinor Volve Field dataset through a 
+shared repository. 
+ 
+The provided data will include: 
+ 
+1.  Well metadata 
+This includes basic information about wells such as well name, sections drilled, and 
+configuration information. 
+ 
+2.  Drilling data samples 
+This includes structured time based or depth based measurements such as: 
+• Depth 
+• Rate of penetration 
+• Rotation speed 
+• Torque 
+• Pump pressure 
+• Flow rate 
+• Hookload or weight on bit 
+3. Daily drilling reports 
+These are written reports prepared by engineers. They describe what activities were performed 
+during the day, what problems occurred, and what actions were taken. 
+ 
+4. Volve documentation 
+This includes supporting documents that explain the dataset and provide background 
+information. 
+ 
+The data will be provided in raw form. There will be no predefined drilling phase labels, no event 
+tags, and no performance ratings. Participants must interpret and structure the data 
+themselves. 
+Open Knowledge Sources You May Use 
+Participants are encouraged to use publicly available reference material as a knowledge base. 
+This material is not curated or simplified. It must be retrieved and interpreted by your system. \n--- PAGE 3 ---\n 
+3 
+ 
+ 
+Examples of public knowledge sources include: 
+• Schlumberger Oilfield Glossary 
+This explains drilling terminology such as rate of penetration, tripping, circulation, and 
+non-productive time. 
+• SPE PetroWiki 
+This contains articles explaining drilling concepts, tools, and operational practices. 
+• IADC drilling terminology documents 
+These explain standard drilling acronyms and definitions. 
+• General engineering references related to drilling and well construction. 
+You may use these sources to help your system understand domain terms and concepts. 
+What Your System Must Do 
+Your system should function as an intelligent agent. It should be able to answer operational 
+questions using both numerical data and written reports. 
+ 
+The types of questions will cover multiple levels of reasoning. 
+Drilling Phase Identification & Validation 
+• Identify and label the major drilling phases for <Well Name> over the selected interval, 
+including the evidence used for each phase. 
+• Detect significant operational or phase transitions, noting when they occurred and why 
+they matter. 
+• Assess how well the inferred drilling phases align with the daily drilling reports. 
+• Identify periods where the operational state is ambiguous and explain the sources of 
+uncertainty. 
+Time & Efficiency Analysis 
+• Distinguish between productive and non-productive drilling time, and justify the criteria 
+used. 
+• Define drilling efficiency for <Well Name> and evaluate how it changes over time. 
+• Compare overall drilling efficiency between <Well Name> and at least one other well. 
+• Evaluate whether higher drilling speed was associated with stable operations or 
+increased operational risk. \n--- PAGE 4 ---\n 
+4 
+ 
+Section & ROP Performance 
+• Determine which hole section appears easiest to drill and which appears most 
+challenging, with supporting evidence. 
+• Analyze how rate of penetration varies across sections and describe notable trends. 
+• Identify periods of exceptional drilling performance and explain why they stand out. 
+Configuration & BHA Effectiveness 
+• Identify the most effective drilling configuration or BHA run and explain the context. 
+• Assess whether changes in configuration coincide with changes in performance. 
+• Evaluate configuration effectiveness by hole section. 
+• Identify configurations that appear robust across operating conditions, as well as those 
+that underperformed and potential reasons why. 
+• Assess how daily drilling reports support or contradict conclusions about configuration 
+effectiveness. 
+Operational Issues & Root Causes 
+• Identify key operational issues encountered while drilling <Well Name>. 
+• Propose likely contributing factors or root causes. 
+• Analyze whether these issues persisted, resolved, or recurred over time. 
+• Highlight areas where drilling data and daily reports provide conflicting interpretations. 
+Synthesis & Recommendations 
+• Compare the drilling phase distribution of <Well Name> with another well <Well 
+Name1> and explain key differences. 
+• Describe remaining uncertainties in the analysis and their potential impact. 
+• Determine which operational team(s) should be notified based on the findings, and why. 
+• Produce a concise operational handover summary for the next shift. 
+• Extract key lessons learned that could apply to future wells. 
+• Based on observed trends, describe expected performance in a similar section of 
+another well. 
+• Recommend a drilling configuration for similar conditions. 
+• Identify what additional data would most improve confidence in the conclusions. 
+Expected Output Format 
+For each question, your system should provide: \n--- PAGE 5 ---\n 
+5 
+ 
+• A clear answer 
+• Evidence from drilling data 
+• Evidence from daily reports 
+• Explanation of reasoning 
+• Statement of assumptions 
+• Confidence level or uncertainty 
+Answers should be understandable to an engineer reviewing your work. 
+Design Criteria 
+You may use: 
+• Open source libraries 
+• Local language models 
+• Free tier cloud models 
+• Statistical analysis methods 
+• Machine learning models 
+• Retrieval augmented generation systems 
+• Tool based agents 
+You are not required to use any proprietary software. 
+ 
+Your system design should prioritize: 
+• Transparency 
+• Traceability of evidence 
+• Clear reasoning 
+• Reproducibility 
+Complexity alone will not be rewarded. 
+Evaluation Criteria 
+Evaluation will be based on a structured question set.  
+Solutions will be assessed based on: 
+• Quality of reasoning 
+• Correct and relevant use of evidence \n--- PAGE 6 ---\n 
+6 
+ 
+• Consistency across answers 
+• Clarity of assumptions 
+• Handling of uncertainty 
+• Practical relevance of insights 
+There is no single correct answer for the questions. Different approaches are acceptable if they 
+are well justified and supported by evidence. 
+ 
+The evaluation emphasizes reasoning quality rather than matching a specific numeric answer. 
+Summary 
+This challenge asks you to build more than a predictive model. It asks you to design an AI system 
+that can read data, understand context, reason through engineering problems, and 
+communicate conclusions clearly. 
+ 
+The objective is to explore how intelligent systems can assist real world operational decision 
+making using raw data and public domain knowledge. 
+ 

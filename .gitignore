@@ -1,0 +1,87 @@
+# ── Environment & Secrets ─────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+venv/
+.venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Data (Volve dataset — large, license-restricted) ──────────────────────────
+data/
+src/data/
+
+# ── Outputs (generated charts & reports) ──────────────────────────────────────
+outputs/
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── IDE & OS ──────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+*Zone.Identifier
+
+# ── Home-directory dotfiles (repo root = $HOME) ───────────────────────────────
+.bash_history
+.bash_logout
+.bashrc
+.profile
+.motd_shown
+.sudo_as_admin_successful
+.bash_aliases
+.bash_profile
+.cache/
+.local/
+.npm/
+.pki/
+.nv/
+.landscape/
+.config/
+.claude/
+.promptfoo/
+
+# ── Logs & Temp files ─────────────────────────────────────────────────────────
+*.log
+*.tmp
+*.txt.bak
+test_logs.txt
+test_output.txt
+verify_*.txt
+verify_*.md
+flowpath.csv
+volve_temp_unzipped/
+
+# ── Root-level dev/debug scripts (not part of the application) ────────────────
+/test_*.py
+/debug_*.py
+/check_*.py
+/create_and_run_notebook.py
+/extract_*.py
+/parse_picks.py
+/read_pdf*.py
+/search_hf.py
+/verify_*.py
+/google-api-models.py
+
+# ── Generated output docs ─────────────────────────────────────────────────────
+challenge_output.md
+dashboard_test_output.md
+
+# ── PDFs in root (large binaries) ─────────────────────────────────────────────
+/*.pdf
