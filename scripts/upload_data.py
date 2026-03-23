@@ -18,7 +18,7 @@ Requirements:
 import sys
 from pathlib import Path
 
-HF_REPO_ID = "SPE-GCS-2026/odin-volve-data"   # <- your HF org/username + repo name
+HF_REPO_ID = "KoopaK/OdinDB"
 ROOT       = Path(__file__).parent.parent
 
 UPLOAD_DIRS = [

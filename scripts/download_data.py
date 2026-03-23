@@ -14,7 +14,7 @@ import os
 import sys
 from pathlib import Path
 
-HF_REPO_ID  = "SPE-GCS-2026/odin-volve-data"   # <- update if repo is renamed
+HF_REPO_ID  = "KoopaK/OdinDB"
 LOCAL_DIR   = Path(__file__).parent.parent / "data"
 
 def main():
