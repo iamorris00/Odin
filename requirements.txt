@@ -7,7 +7,8 @@ langchain-community==0.4.1
 langchain-google-genai==4.2.1
 
 # ── RAG / Vector store ────────────────────────────────────────────────────────
-chromadb==1.5.5
+# chromadb version is managed by crewai (crewai 1.10.1 requires ~=1.1.0)
+chromadb>=1.1.0,<1.2.0
 sentence-transformers==5.3.0
 
 # ── Data processing ───────────────────────────────────────────────────────────
@@ -19,14 +20,10 @@ openpyxl==3.1.5
 # ── Visualisation ─────────────────────────────────────────────────────────────
 plotly==6.3.0
 matplotlib==3.10.5
-kaleido==0.2.1          # 0.2.x uses bundled binary (no Chrome needed); 1.x requires Chrome
-
-# ── UI ────────────────────────────────────────────────────────────────────────
-gradio==6.9.0
+kaleido==0.2.1          # 0.2.x uses bundled binary (no Chrome needed)
 
 # ── Utilities ─────────────────────────────────────────────────────────────────
 python-dotenv==1.1.1
-huggingface_hub>=0.23.0
 requests==2.32.5
 httpx==0.28.1
-uvicorn==0.41.0
+huggingface_hub>=0.23.0
