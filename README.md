@@ -1,3 +1,15 @@
+---
+title: ODIN — Operational Drilling Intelligence Network
+emoji: 🛢️
+colorFrom: slate
+colorTo: green
+sdk: gradio
+sdk_version: 6.9.0
+app_file: app.py
+pinned: true
+license: mit
+---
+
 # ODIN — Operational Drilling Intelligence Network
 
 > Multi-agent AI system for subsurface and drilling engineering analysis

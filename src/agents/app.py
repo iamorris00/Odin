@@ -1051,23 +1051,21 @@ def build_app():
 # ENTRY POINT
 # ─────────────────────────────────────────────────────────────────────────────
 
-if __name__ == "__main__":
+def _make_demo():
     base_proj_dir = Path(__file__).resolve().parents[2]
     figures_dir   = base_proj_dir / "outputs" / "figures"
     figures_dir.mkdir(parents=True, exist_ok=True)
+    return build_app(), figures_dir
 
-    theme = gr.themes.Soft(
-        primary_hue="emerald",
-        secondary_hue="slate",
-        neutral_hue="slate",
-        font=gr.themes.GoogleFont("Inter"),
-    )
-    app = build_app()
-    app.launch(
+
+# Module-level demo for HF Spaces (imported by root app.py)
+demo, _figures_dir = _make_demo()
+
+
+if __name__ == "__main__":
+    demo.launch(
         server_name="0.0.0.0",
         server_port=7860,
         share=False,
-        allowed_paths=[str(figures_dir)],
-        theme=theme,
-        css=CUSTOM_CSS,
+        allowed_paths=[str(_figures_dir)],
     )
