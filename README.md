@@ -165,17 +165,6 @@ Automatic 429 retry with exponential back-off (10 → 20 → 40 → 60s) is buil
 
 ---
 
-## Evaluation
-
-```bash
-# Run PromptFoo evaluation suite
-npx promptfoo eval
-```
-
-Config: `promptfooconfig.yaml`
-
----
-
 ## License
 
 Source code: MIT
