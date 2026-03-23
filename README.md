@@ -14,12 +14,13 @@ license: mit
 
 > Multi-agent AI system for subsurface and drilling engineering analysis
 > Built on the public Equinor Volve Field dataset · SPE GCS 2026 ML Challenge
+> Give it a try! [ODIN](https://huggingface.co/spaces/KoopaK/Odin)
 
 ---
 
 ## Overview
 
-ODIN is a CrewAI-powered multi-agent system that answers complex drilling engineering questions by reasoning over structured data (WITSML, EDM) and unstructured reports (Daily Drilling Reports). It combines real-time data retrieval, RAG over domain knowledge, and a Gradio chat interface with inline Plotly visualizations.
+ODIN is a CrewAI-powered multi-agent system powered by gemini 3.1 flash lite (free within free-tier model) that answers complex drilling engineering questions by reasoning over structured data (WITSML, EDM) and unstructured reports (Daily Drilling Reports). It combines real-time data retrieval, RAG over domain knowledge, and a Gradio chat interface with inline Plotly visualizations.
 
 **Key capabilities:**
 - Drill phase distribution & NPT breakdown analysis
@@ -68,9 +69,9 @@ Orchestrator (orchestrator.py)
 
 | Layer | Technology |
 |---|---|
-| LLM | Google Gemini 2.5 Flash (via `google-generativeai`) |
+| LLM | Google Gemini 3.1 Flash (via `google-generativeai`) + Gemini Embedding 2 |
 | Agent framework | CrewAI 1.10 |
-| RAG / Vector store | ChromaDB + `sentence-transformers` |
+| RAG / Vector store | ChromaDB + `sentence-transformers` + OpenViking |
 | Data processing | Pandas, NumPy, PDFPlumber |
 | Visualisation | Plotly (HTML) + Kaleido (PNG) |
 | UI | Gradio 6 |
