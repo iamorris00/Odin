@@ -1,7 +1,7 @@
 ---
 title: ODIN — Operational Drilling Intelligence Network
 emoji: 🛢️
-colorFrom: slate
+colorFrom: gray
 colorTo: green
 sdk: gradio
 sdk_version: 6.9.0
